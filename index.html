@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NETFLIX-SHOP</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <!-- إضافة الشعار في الجهة اليسرى -->
+        <img src="logo.png" alt="Logo" id="logo">
+
+        <!-- اسم الموقع في الوسط -->
+        <h1>NETFLIX-SHOP</h1>
+
+        <!-- زر واتساب دائري في الجهة اليمنى -->
+        <a href="https://wa.me/213798913454" target="_blank" id="whatsappButton">
+            <img src="whatsapp.png" alt="WhatsApp">
+        </a>
+    </header>
+    
+    <main>
+        <section id="products">
+            <div class="product" data-product="Netflix" data-price="400">
+                <img src="netflix.png" alt="Netflix">
+                <h2>Netflix</h2>
+                <p class="product-price">400 DZD</p>
+                <p class="product-description">استمتع بمكتبة ضخمة من الأفلام والمسلسلات بجودة عالية مع اشتراك نتفليكس. اختر مدة الاشتراك المناسبة لك.</p>
+                <select class="duration-select">
+                    <option value="1">1 شهر</option>
+                    <option value="2">2 شهرين</option>
+                    <option value="3">3 أشهر</option>
+                </select>
+                <button class="addToCartButton">أضف إلى السلة</button>
+            </div>
+            <div class="product" data-product="Spotify" data-price="350">
+                <img src="spotify.png" alt="Spotify">
+                <h2>Spotify</h2>
+                <p class="product-price">350 DZD</p>
+                <p class="product-description">استمع إلى ملايين الأغاني بدون إعلانات مع اشتراك سبوتيفاي. اختر مدة الاشتراك التي تناسبك.</p>
+                <select class="duration-select">
+                    <option value="1">1 شهر</option>
+                    <option value="2">2 شهرين</option>
+                    <option value="3">3 أشهر</option>
+                </select>
+                <button class="addToCartButton">أضف إلى السلة</button>
+            </div>
+            <div class="product" data-product="Xbox Game Pass" data-price="600">
+                <img src="xbox.png" alt="Xbox Game Pass">
+                <h2>Xbox Game Pass</h2>
+                <p class="product-price">600 DZD</p>
+                <p class="product-description">احصل على وصول إلى مكتبة ضخمة من الألعاب على Xbox مع اشتراك Xbox Game Pass. اختر مدة الاشتراك التي تفضلها.</p>
+                <select class="duration-select">
+                    <option value="1">1 شهر</option>
+                    <option value="2">2 شهرين</option>
+                    <option value="3">3 أشهر</option>
+                </select>
+                <button class="addToCartButton">أضف إلى السلة</button>
+            </div>
+        </section>
+
+        <!-- سلة المشتريات -->
+        <div id="cart" class="hidden">
+            <div class="cart-container">
+                <h2>تفاصيل الشراء</h2>
+                <p id="totalPrice">سعر إجمالي: 0 DZD</p>
+                <form id="orderForm">
+                    <label for="name">الاسم:</label>
+                    <input type="text" id="name" name="name" placeholder="أدخل اسمك" required>
+
+                    <label for="phone">:رقم الهاتف</label>
+                    <input type="text" id="phone" name="phone" placeholder="أدخل رقم هاتفك" required>
+
+                    <input type="submit" value="شراء">
+                </form>
+                <button id="exitButton" onclick="closeCart()">X</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- زر الانتقال إلى السلة مع صورة PNG -->
+    <button id="goToCartButton" class="hidden">
+        <img src="cart.png" alt="سلة">
+   
+</body>
+
+</html>
+
