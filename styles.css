@@ -178,9 +178,9 @@ input[type="submit"]:hover {
 /* تنسيق الشعار */
 #logo {
     position: absolute;
-    left: 20px;
+    left: 10px;
     top: 20px;
-    width: 170px; /* حجم الشعار */
+    width: 160px; /* حجم الشعار */
     height: auto;
 }
 
@@ -386,4 +386,26 @@ select.duration-select:focus {
 /* تأثير hover لزر الشراء */
 #orderForm input[type="submit"]:hover {
     background-color: #218838; /* لون أخضر أغمق عند التمرير */
+}
+/* تنسيق اسم الموقع */
+#siteName {
+    font-size: 2rem; /* حجم الخط الأساسي */
+    text-align: center;
+    color: #fff; /* لون النص */
+    margin: 0;
+    padding: 10px 0;
+}
+
+/* تصغير حجم الخط على الأجهزة المحمولة */
+@media (max-width: 768px) {
+    #siteName {
+        font-size: 1.5rem; /* حجم الخط على الهواتف المحمولة */
+    }
+}
+
+/* تصغير حجم الخط على الأجهزة الأصغر */
+@media (max-width: 480px) {
+    #siteName {
+        font-size: 1.2rem; /* حجم الخط على الأجهزة الأصغر */
+    }
 }
